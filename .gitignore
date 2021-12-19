@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+public
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -13,3 +15,4 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+>>>>>>> 2de842d52b31bf90ef8c0e4cf87245c85c870891
