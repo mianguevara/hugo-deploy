@@ -8,15 +8,15 @@ phases:
             docker: 19
         commands:
             - cd /tmp
-            - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug\o_${HUGO_VERSION}_Linux-32bit.tar.gz
-            - tar -xzf hugo_${HUGO_VERSION}_Linux-32bit.tar.gz
+            - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug\o_${HUGO_VERSION}_Linux-64bit.tar.gz
+            - tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
             - mv hugo /usr/bin/hugo
             - cd -
             - rm -rf /tmp/*
     build:
         commands:
             - rm -rf public
-            - hugo
+            - hugo deploy
             - aws s3 sync public/ s3://hugo-example/ --region us-west-2 --delete
     post_build:
         commands:
